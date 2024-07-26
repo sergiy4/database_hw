@@ -129,7 +129,7 @@ CREATE TABLE character_movies (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (character_id) REFERENCES characters(id),
     FOREIGN KEY (movie_id) REFERENCES movies(id),
-    UNIQUE (character_id, movie_id) -- Забезпечує, що один персонаж не може з'являтися в одному фільмі більше одного разу
+    UNIQUE (character_id, movie_id) 
 );
 
 
