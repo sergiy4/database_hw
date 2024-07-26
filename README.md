@@ -24,7 +24,7 @@ erDiagram
         VARCHAR(255) key
         VARCHAR(255) url
         TIMESTAMP created_at
-        TIMESTAMP updatedAt
+        TIMESTAMP updated_at
     }
 
     MOVIES {
@@ -69,7 +69,6 @@ erDiagram
         INT id PK
         INT character_id FK
         INT person_id FK
-        VARCHAR(50) role
         TIMESTAMP created_at
         TIMESTAMP updated_at
     }
@@ -88,7 +87,7 @@ erDiagram
         INT person_id FK
         VARCHAR(50) role
         TIMESTAMP created_at
-        TIMESTAMP updatedAt
+        TIMESTAMP updated_at
     }
 
     PERSONS {
@@ -97,7 +96,7 @@ erDiagram
         VARCHAR(255) last_name
         TEXT biography
         DATE date_of_birth
-        VARCHAR(10) gender
+        gender_type gender
         INT country_id FK
         INT primary_photo_id FK
         TIMESTAMP created_at
