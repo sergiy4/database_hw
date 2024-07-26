@@ -267,25 +267,25 @@ INSERT INTO "users" (username, first_name, last_name, email, "password", avatar_
 INSERT INTO "persons" (first_name, last_name, biography, date_of_birth, gender, country_id, primary_photo_id) VALUES
 ('Quentin', 'Tarantino', 'Director known for non-linear stories', '1963-03-27', 'male', 1, 6),
 ('Leonardo', 'DiCaprio', 'Award-winning actor', '1974-11-11', 'male', 1, 7),
-('Kate', 'Winslet', 'Award-winning actress', '1975-10-05', 'female', 2, 8),
+('Kate', 'Winslet', 'Award-winning actress', '1975-10-05', 'female', 2, NULL),
 ('Brad', 'Pitt', 'Award-winning actor', '1963-12-18', 'male', 1, 9),
-('Natalie', 'Portman', 'Award-winning actress', '1981-06-09', 'female', 3, 10),
-('Christopher', 'Nolan', 'Director known for complex narratives', '1970-07-30', 'male', 1, NULL),
+('Natalie', 'Portman', 'Award-winning actress', '1981-06-09', 'female', 3, NULL),
+('Christopher', 'Nolan', 'Director known for complex narratives', '1970-07-30', 'male', 1, 10),
 ('Emma', 'Thompson', 'Award-winning actress and screenwriter', '1959-04-15', 'female', 2, NULL),
-('Tom', 'Hardy', 'Award-winning actor known for versatile roles', '1977-09-15', 'male', 1, NULL);
+('Tom', 'Hardy', 'Award-winning actor known for versatile roles', '1977-09-15', 'male', 1, 8);
 
 INSERT INTO "movies" (title, description, budget, release_date, duration, director_id, country_id, poster_id) VALUES
-('Inception', 'A thief who steals corporate secrets through the use of dream-sharing technology.', 160000000, '2010-07-16', 148, 6, 1, 1),
+('Inception', 'A thief who steals corporate secrets through the use of dream-sharing technology.', 160000000, '2023-07-16', 148, 6, 1, 1),
 ('Titanic', 'A seventeen-year-old aristocrat falls in love with a kind but poor artist.', 200000000, '1997-12-19', 195, 1, 1, 2),
 ('Pulp Fiction', 'The lives of two mob hitmen, a boxer, a gangster and his wife intertwine in four tales of violence and redemption.', 8000000, '1994-10-14', 154, 1, 1, 3),
 ('Fight Club', 'An insomniac office worker and a devil-may-care soapmaker form an underground fight club.', 63000000, '1999-10-15', 139, 1, 1, 4),
-('Black Swan', 'A committed dancer wins the lead role in a production of Tchaikovsky "Swan Lake".', 13000000, '2010-12-17', 108, 5, 1, 5);
+('Black Swan', 'A committed dancer wins the lead role in a production of Tchaikovsky "Swan Lake".', 13000000, '2024-12-17', 150, 5, 1, 5);
 
 INSERT INTO "genres" (name) VALUES
 ('Action'), ('Drama'), ('Thriller'), ('Romance'), ('Sci-Fi');
 
 INSERT INTO "movie_genres" (movie_id, genre_id) VALUES
-(1, 1), (1, 5), (2, 2), (2, 4), (3, 1), (3, 2), (4, 1), (4, 2), (5, 2), (5, 3);
+(1, 1),(1, 2), (1, 5), (2, 2), (2, 4), (3, 1), (3, 2), (4, 1), (4, 2), (5, 2),(5, 1), (5, 3);
 
 INSERT INTO "characters" (name, description, "role") VALUES
 ('Dom Cobb', 'A skilled thief and the protagonist of Inception.', 'leading'),
@@ -303,10 +303,10 @@ INSERT INTO character_movies (character_id, movie_id) VALUES
 (1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 1), (7, 2), (8, 3), (9, 1), (10, 1);
 
 INSERT INTO character_actors (character_id, person_id) VALUES
-(1, 2), (2, NULL), (3, 3), (4, 4), (5, NULL), (6, 3), (7, 3), (8, 4), (9, 7), (10, 8);
+(1, 2), (2, NULL), (3, 3), (4, 4), (5, NULL), (5, 2), (6, 3), (7, 3), (8, 4), (9, 7), (10, 8);
 
 INSERT INTO movie_casts (movie_id, person_id) VALUES
 (1, 2), (1, 7), (1, 8), (2, 2), (2, 3), (3, 3), (3, 4), (4, 4), (5, 5), (5, 7);
 
 INSERT INTO favorite_movies (movie_id, user_id) VALUES
-(1, 1), (2, 2), (3, 3), (4, 4), (5, 5);
+(1, 1), (2, 1),(2, 3),(2, 2), (3, 3), (4, 4), (4, 5),(4, 3),(5, 5);
