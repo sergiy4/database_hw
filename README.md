@@ -143,6 +143,7 @@ erDiagram
     MOVIE_CASTS }o--|| PERSONS: "person_id"
 
     PERSONS }o--|| COUNTRIES : "country_id"
+    PERSONS ||--o| FILES : "primary_photo_id"
 
     PERSON_PHOTOS }o--|| PERSONS : "person_id"
     PERSON_PHOTOS }o--|| FILES : "photo_id"
