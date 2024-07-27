@@ -85,7 +85,6 @@ erDiagram
         INT id PK
         INT movie_id FK
         INT person_id FK
-        VARCHAR(50) role
         TIMESTAMP created_at
         TIMESTAMP updated_at
     }
@@ -150,5 +149,7 @@ erDiagram
 
     FAVORITE_MOVIES }o--|| USERS : "user_id"
     FAVORITE_MOVIES }o--|| MOVIES : "movie_id"
+
+
 
 ```
